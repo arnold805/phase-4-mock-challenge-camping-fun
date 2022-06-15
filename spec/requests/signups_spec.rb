@@ -17,6 +17,8 @@ RSpec.describe "Signups", type: :request do
 
       it 'returns the associated Activity data' do
         post '/signups', params: signup_params
+        # binding.pry
+        # response.body in pry session
 
         expect(response.body).to include_json({
           id: a_kind_of(Integer),
